@@ -1,22 +1,22 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import classes from "./Cockpit.module.css";
-import Aux from "../../hoc/aux"
+import Aux from "../../hoc/aux";
 
 const Cockpit = (props) => {
-  
   console.log("[Cockpit.js]  rendering..");
-  
+
   useEffect(() => {
     console.log("[Cockpit.js]  useEffect called...");
     setTimeout(() => {
-        alert("saved data to cloud");
-    },1000);
+      alert("saved data to cloud");
+    }, 1000);
 
-    return(() => {console.log("[Cockpit.js] cleanup work in  useEffect ");});
-
-  },[]);
-//   array above are dependency on which condition it will rerun so give
-//  empty array to run this for only the first time , else the props like [props.showPerson]
+    return () => {
+      console.log("[Cockpit.js] cleanup work in  useEffect ");
+    };
+  }, []);
+  //   array above are dependency on which condition it will rerun so give
+  //  empty array to run this for only the first time , else the props like [props.showPerson]
 
   let btnClass = "";
 

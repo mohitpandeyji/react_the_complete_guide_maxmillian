@@ -28,14 +28,13 @@ class App extends Component {
     console.log("[App.js] componentDidMount method");
   }
 
-  shouldComponentUpdate(nextProps, nextState){
+  shouldComponentUpdate(nextProps, nextState) {
     console.log("[App.js] shouldComponentUpdate method");
     return true;
   }
 
-  componentDidUpdate(){
+  componentDidUpdate() {
     console.log("[App.js] componentDidUpdate method");
-
   }
 
   deletePersonHandler = (personIndex) => {
